@@ -37,20 +37,20 @@
                 </div>
                 <!-- batas menu kategori -->
 
-                <!--  -->
-                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#colapsAnggota" aria-expanded="false" aria-controls="colapsAnggota">
+                <!-- menu anggota -->
+                <a class="nav-link <?php echo ($page == "daftar-anggota" || $page == "tambah-anggota" || $page == "ubah-password")? "active" : "collapsed"?>" href="#" data-bs-toggle="collapse" data-bs-target="#colapsAnggota" aria-expanded="false" aria-controls="colapsAnggota">
                     <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
                     Anggota
                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                 </a>
-                <div class="collapse" id="colapsAnggota" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                <div class="collapse <?php echo ($page == "daftar-anggota" || $page == "tambah-anggota" || $page == "ubah-password")? "show" : ""?>" id="colapsAnggota" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="layout-static.html">Daftar Anggota</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Tambah Anggota</a>
-                        <a class="nav-link" href="layout-sidenav-light.html">Peminjaman</a>
+                        <a class="nav-link <?php echo ($page == "daftar-anggota")? 'active' : '';  ?>" href="index.php?hal=daftar-anggota">Daftar Anggota</a>
+                        <a class="nav-link <?php echo ($page == "tambah-anggota")? 'active' : '';  ?>" href="index.php?hal=tambah-anggota">Tambah Anggota</a>
                     </nav>
                 </div>
-
+                <!-- batas menu anggota -->
+                
                 <div class="sb-sidenav-menu-heading">Transaksi</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#colapsPeminjaman" aria-expanded="false" aria-controls="colapsPeminjaman">
                     <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
