@@ -8,6 +8,8 @@ if(!isset($_SESSION['admin_logged_in'])) {
     exit;
 }
 
+require_once "includes/config.php";
+
 define('MY_APP', true); //ini berfungsi untuk proteksi, ada dihalaman pages.
 //jadi dashboard.php tidak dapat diakses langsung dari url: localhost/pages/dashboard.php dia harus melewati index.php
 //jadi localhost/index.php?hal=dashbaard
