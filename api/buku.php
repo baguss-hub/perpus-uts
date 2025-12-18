@@ -1,20 +1,26 @@
 <?php
-session_start();
+session_start(); 
 require_once '../includes/config.php';
 
+//buat fungsi untuk respon json
+
 function response($status, $msg, $data = null) {
+    //format response yang akan kita kirim ke client (android app)
     echo json_encode([
         'status' => $status,
         'message' => $msg,
         'data' => $data
     ]);
-    exit;
+    exit; // ini untuk menghentikan semua proses
 }
 
+//pastikan semua method yg digunakan adalah GET
 if ($_SERVER["REQUEST_METHOD"] !== "GET") {
     response("error", "Gunakan metode GET.");
 }
 
+
+//query
 if (isset($_GET['id'])) {
     
     $id = intval($_GET['id']);
